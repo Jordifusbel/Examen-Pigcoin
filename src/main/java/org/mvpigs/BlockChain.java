@@ -20,4 +20,9 @@ public class BlockChain {
     public void addOrigin(Transaction newBillet){
         history.add(newBillet);
     }
+
+    public void summarize(){
+        for(int pos = 0; pos < getHistory().lastIndexOf(); pos++)
+            System.out.println(this.history(pos).Transaction.toString());
+    }
 }

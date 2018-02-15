@@ -37,7 +37,7 @@ public class AppTest
     }
 
     /**@test**/
-    public void testHist3() {
+    public void testHist4() {
         Wallet wallet_1 = new Wallet();
         Wallet wallet_2 = new Wallet();
         Transaction trx = new Transaction("hash_1", "0", wallet_1.getAddress(), wallet_2.getAddress(), 20.0, "a flying pig!");
@@ -48,6 +48,16 @@ public class AppTest
                 "Pigcoins = 20.0" +
                 "Message = a flying pig!",  System.out.println(trx.toString()));
     }
+
+    /**@test**/
+    public void testHist5() {
+        Wallet origin = new Wallet();
+        origin.generateKeyPair();
+
+        BlockChain bChain = new BlockChain();
+    }
+
+
 
 
     public void testApp() {
