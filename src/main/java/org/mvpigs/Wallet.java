@@ -9,7 +9,7 @@ public class Wallet {
     private PrivateKey SK;
     private Double Total_Input = 0.0;
     private Double Total_Output = 0.0;
-    private Double Balance = 0.0;
+    private Double Balance = Total_Input - Total_Output;
 
 
     public Wallet(){
