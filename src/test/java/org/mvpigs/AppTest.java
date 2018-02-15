@@ -68,7 +68,24 @@ public class AppTest
                 "Message = a flying pig!",  System.out.println(trx.toString()));
     }
 
+    /**@test**/
+    public void testHist6() {
+        Wallet wallet_1 = new Wallet();
+        Wallet wallet_2 = new Wallet();
+        wallet_1.generateKeyPair();
+        wallet_2.generateKeyPair();
 
+        BlockChain bChain = new BlockChain();
+        Transaction trx = new Transaction("hash_3", "hash_1", wallet_1.getAddress(), wallet_2.getAddress(), 20.0, "a flying pig!");
+        bChain.addOrigin(trx);
+        bChain.summarize(0);
+        assertEquals("Hash = hash_3" +
+                "Previous Hash = hash_1" +
+                "Sender Public Key = '%%%%%%%'" +
+                "Recipient Public Key = '%%%%%%%'" +
+                "Pigcoins = 20.0" +
+                "Message = a flying pig!",  System.out.println(trx.toString()));
+    }
 
 
     public void testApp() {
