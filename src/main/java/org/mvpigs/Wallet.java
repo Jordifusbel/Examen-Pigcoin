@@ -8,7 +8,14 @@ public class Wallet {
     public PublicKey address;
     private PrivateKey SK;
 
-    public Wallet (){
+    public Wallet(){
+
+    }
+
+    public void generateKeyPair(){
+        KeyPair pair = GenSig.generateKeyPair();
+        this.setSK(pair.getPrivate());
+        this.setAddress(pair.getPublic());
 
     }
 
