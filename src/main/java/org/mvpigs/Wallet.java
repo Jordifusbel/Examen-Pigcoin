@@ -71,4 +71,10 @@ public class Wallet {
         System.out.println("Balance = " + this.getBalance() + "\n");
 
     }
+
+    public void loadCoins(BlockChain world){
+
+        for (int n; n<world.getHistory().lastIndexOf(); n++)
+            if
+    }
 }
