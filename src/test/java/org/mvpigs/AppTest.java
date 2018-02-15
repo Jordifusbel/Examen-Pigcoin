@@ -1,38 +1,19 @@
 package org.mvpigs;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import java.security.KeyPair;
 
-/**
- * Unit test for simple App.
- */
-public class AppTest 
-    extends TestCase
-{
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
-    }
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
 
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
+public class AppTest {
+
+    @test
+    public void testApp() {
+        Wallet wallet_1 = new Wallet();
+        KeyPair pair = GenSig.generateKeyPair();
+        wallet_1.setSK(pair.getPrivate());
+        wallet_1.setAddress(pair.getPublic());
+        assertNotNull(wallet_1.getAddress());
     }
 }
