@@ -10,6 +10,16 @@ public class Transaction {
     private Double pigcoins;
     private String message;
 
+    public Transaction(String hash, String prev_hash, PublicKey pKey_sender, PublicKey pKey_recipient, Double pigcoins, String message ){
+        this.setHash(hash);
+        this.setPrev_hash(prev_hash);
+        this.setpKey_sender(pKey_sender);
+        this.setpKey_recipient(pKey_recipient);
+        this.setPigcoins(pigcoins);
+        this.setMessage(message);
+
+    }
+
     public String getHash() {
         return hash;
     }

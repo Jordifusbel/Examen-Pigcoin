@@ -53,7 +53,7 @@ public class App {
                 "==============="        );
 
         Transaction trx = new Transaction();
-        trx = new Transaction("hash_1", "0", wallet_1.getAddress(), wallet_2.getAddress(), 20, "a flying pig!");
+        trx = new Transaction("hash_1", "0", wallet_1.getAddress(), wallet_2.getAddress(), 20.0, "a flying pig!");
 
         System.out.println(trx.toString());
 
