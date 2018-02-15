@@ -1,7 +1,5 @@
-package org.mvpigs.pigcoin;
+package org.mvpigs;
 
-import org.mvpigs.Wallet;
-import org.mvpigs.GenSig;
 import java.security.KeyPair;
 import java.util.Map;
 
