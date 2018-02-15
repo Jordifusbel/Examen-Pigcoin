@@ -1,5 +1,7 @@
 package org.mvpigs;
 
+import org.mvpigs.Transaction;
+
 import java.util.ArrayList;
 
 public class BlockChain {
@@ -25,4 +27,5 @@ public class BlockChain {
         for(int pos = 0; pos < getHistory().lastIndexOf(); pos++)
             System.out.println(this.history(pos).Transaction.toString());
     }
+
 }

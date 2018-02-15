@@ -70,11 +70,11 @@ public class App {
         origin.generateKeyPair();
 
         BlockChain bChain = new BlockChain();
-        trx = new Transaction("hash_1", "0", origin.getAddress(), wallet_1.getAddress(), 20, "bacon eggs");
+        trx = new Transaction("hash_1", "0", origin.getAddress(), wallet_1.getAddress(), 20.0, "bacon eggs");
         bChain.addOrigin(trx);
-        trx = new Transaction("hash_2", "1", origin.getAddress(), wallet_2.getAddress(), 10, "spam spam spam");
+        trx = new Transaction("hash_2", "1", origin.getAddress(), wallet_2.getAddress(), 10.0, "spam spam spam");
         bChain.addOrigin(trx);
-        trx = new Transaction("hash_3", "hash_1", wallet_1.getAddress(), wallet_2.getAddress(), 20, "a flying pig!");
+        trx = new Transaction("hash_3", "hash_1", wallet_1.getAddress(), wallet_2.getAddress(), 20.0, "a flying pig!");
         bChain.addOrigin(trx);
 
         // Visualiza el blockchain
