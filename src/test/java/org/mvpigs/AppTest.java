@@ -35,6 +35,21 @@ public class AppTest
                 "Total Output = 0.0" +
                 "Balance = 0.0",  System.out.println(wallet_1.toString()));
     }
+
+    /**@test**/
+    public void testHist3() {
+        Wallet wallet_1 = new Wallet();
+        Wallet wallet_2 = new Wallet();
+        Transaction trx = new Transaction("hash_1", "0", wallet_1.getAddress(), wallet_2.getAddress(), 20.0, "a flying pig!");
+        assertEquals("Hash = hash_1" +
+                "Previous Hash = 0" +
+                "Sender Public Key = '%%%%%%%'" +
+                "Recipient Public Key = '%%%%%%%'" +
+                "Pigcoins = 20.0" +
+                "Message = a flying pig!",  System.out.println(trx.toString()));
+    }
+
+
     public void testApp() {
         assertTrue( true );
     }
